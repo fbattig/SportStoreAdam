@@ -1,17 +1,32 @@
 import { NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+
 import { ModelModule } from '../model/model.module';
 import { StoreComponent } from './store.component';
 import { CartSummaryComponent } from './cartSummary.component';
+import { CartDetailComponent } from './cartDetail.component';
+import { CheckoutComponent } from './checkOut.component';
+
 
 @NgModule({
-  imports: [ModelModule, BrowserModule, FormsModule],
+  imports: [
+    ModelModule,
+    BrowserModule,
+    FormsModule,
+    RouterModule],
   declarations: [
     StoreComponent,
-    CartSummaryComponent
+    CartSummaryComponent,
+    CartDetailComponent,
+    CheckoutComponent
   ],
-  exports: [StoreComponent]
+  exports: [
+    StoreComponent,
+    CartDetailComponent,
+    CheckoutComponent
+  ]
 
 })
 export class StoreModule { }

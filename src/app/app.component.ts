@@ -2,9 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app',
- template: `
-  <app-store></app-store>
-   `
+ template: ` <router-outlet></router-outlet> `
 })
 export class AppComponent {
   title = 'superstore';
